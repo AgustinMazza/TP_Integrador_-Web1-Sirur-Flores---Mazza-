@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    /*me permite usar el align items*/
+    justify-content: center;
+}
+
+h1 {
+    color: blue;
+    font-weight: bold;
+}
+
+form {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    width: 400px;
+    margin: 80px auto;
+    gap: 10px;
+}
+
+select {
+    border-style: hidden;
+    background: transparent;
+    border-bottom: 2px rgb(0, 47, 255) solid;
+
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: black;
+    border-style: hidden;
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: medium;
+    height: 20px;
+    width: 60px;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    justify-content: space-between;
+    /*margin: 10px;*/
+    cursor: pointer;
+}
