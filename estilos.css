@@ -1,18 +1,37 @@
+
+
 body {
     display: flex;
+    flex-direction: column;
     /*me permite usar el align items*/
-    justify-content: center;
+ 
 
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 
     font-family: Arial, Helvetica, sans-serif;
     background-color: #E0F2FE;
 }
 
+.menu {
+
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+main {}
+
 h1 {
     color: #1E3A8A;
     font-weight: bold;
+}
+h2{
+    text-align: center;
+    margin: 0px;
+}
+p{
+    text-align: justify;
+    margin: 0px;
 }
 
 form {
@@ -37,7 +56,15 @@ select {
 
 div {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+
+}
+
+#carru {
+    justify-content: space-evenly;
+}
+img{
+    border-radius: 10px;
 }
 
 button {
@@ -57,15 +84,31 @@ button {
     cursor: pointer;
 }
 
-Totalproductos {
-    display: flex;
+.Totalproductos {
+    display:flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    gap: 20px;
+    
+    
 }
 
-produto {}
+article{
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px #3B82F6;
+    min-width: 100px;
+    max-width: 250px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.producto:hover {
+    transform: scale(1.05); /* agranda un poco */
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.2); /* sombra más fuerte */
+}
 
-carrusel {
+
+.Carrusel {
     display: flex;
     /*para que pueda moverse en sentido horizontal va por defecto */
     overflow-x: auto;
@@ -79,10 +122,11 @@ carrusel {
 
 }
 
-carrusel img {
+
+#img {
     flex-shrink: 0;
-    width: 200px;
-    height: 200px;
+    width: 10px;
+    height: 10px;
     /*no se achica la imagen*/
 }
 

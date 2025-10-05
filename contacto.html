@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <nav class="menu">
+        <nav class="menu" >
             <a href="index.html">Inicio</a>
             <a href="articulo.html">Articulos</a>
             <a href="contacto.html">Contacto</a>
@@ -22,41 +22,41 @@
         Pagina de contacto
     </h1>
     <h1>Formulario de contacto</h1>
+    <main>
+        <form>
+            <label> Nombre: </label>
+            <input type="text" name="nombre" maxlength="20" required>
+            <label> Apellido: </label>
+            <input type="text" name="apelliod" maxlength="20" required>
+            <label>Genero:</label>
+            <select name="Genero" id="" required>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="No definido">No definido</option>
+            </select>
+            <label>Fecha de Nacimiento:</label>
+            <input type="date" name="FechaNac" id="" min="1900-01-01" required>
+            <label> Edad: </label>
+            <input type="number" name="edad" maxlength="2" pattern="[0-9]{10}" required>
+            <label> Dni: </label>
+            <input type="number" name="dni" maxlength="8" pattern="[0-9]" required>
+            <label> Email: </label>
+            <input type="email" name="email" maxlength="20" placeholder="ejemplo@xmail.com" required>
+            <label> Telefono 1: </label>
+            <input type="tel" name="telefono1" maxlength="10" pattern="[0-9]{10}" placeholder="011745356" required>
+            <label> Telefono 2 (opcional): </label>
+            <input type="tel" name="telefono2" maxlength="10" pattern="[0-9]{10}" placeholder="011745356">
 
-    <form>
-        <label> Nombre: </label>
-        <input type="text" name="nombre" maxlength="20" required>
-        <label> Apellido: </label>
-        <input type="text" name="apelliod" maxlength="20" required>
-        <label>Genero:</label>
-        <select name="Genero" id="" required>
-            <option value="Masculino">Masculino</option>
-            <option value="Femenino">Femenino</option>
-            <option value="No definido">No definido</option>
-        </select>
-        <label>Fecha de Nacimiento:</label>
-        <input type="date" name="FechaNac" id="" min="1900-01-01" required>
-        <label> Edad: </label>
-        <input type="number" name="edad" maxlength="2" pattern="[0-9]{10}" required>
-        <label> Dni: </label>
-        <input type="number" name="dni" maxlength="8" pattern="[0-9]" required>
-        <label> Email: </label>
-        <input type="email" name="email" maxlength="20" placeholder="ejemplo@xmail.com" required>
-        <label> Telefono 1: </label>
-        <input type="number" name="telefono1" maxlength="10" pattern="[0-9]{10}" placeholder="011745356" required>
-        <label> Telefono 2 (opcional): </label>
-        <input type="number" name="telefono2" maxlength="10" pattern="[0-9]{10}" placeholder="011745356">
-
-        <div>
-            <button type="submit">
-                Enviar
-            </button>
-            <button type="reset">
-                Reset
-            </button>
-        </div>
-    </form>
-
+            <div>
+                <button type="submit">
+                    Enviar
+                </button>
+                <button type="reset">
+                    Reset
+                </button>
+            </div>
+        </form>
+    </main>
 
 
 </body>
