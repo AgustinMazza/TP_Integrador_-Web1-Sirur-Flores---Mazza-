@@ -2,10 +2,16 @@ body {
     display: flex;
     /*me permite usar el align items*/
     justify-content: center;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E0F2FE;
 }
 
 h1 {
-    color: blue;
+    color: #1E3A8A;
     font-weight: bold;
 }
 
@@ -46,7 +52,38 @@ button {
     margin-top: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    justify-content: space-between;
+    /*justify-content: space-between;
     /*margin: 10px;*/
     cursor: pointer;
 }
+
+Totalproductos {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+produto {}
+
+carrusel {
+    display: flex;
+    /*para que pueda moverse en sentido horizontal va por defecto */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    /*como que se encaja cuando moves para izquierda o derecha*/
+
+    gap: 8px;
+    padding: 10px;
+    background-color: #1E3A8A;
+
+
+}
+
+carrusel img {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    /*no se achica la imagen*/
+}
+
+/*Paleta de colores- gama de azules  #3B82F6  #60A5FA  #1E3A8A  #E0F2FE */

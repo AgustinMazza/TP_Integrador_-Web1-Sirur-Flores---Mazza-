@@ -37,15 +37,15 @@
         <label>Fecha de Nacimiento:</label>
         <input type="date" name="FechaNac" id="" min="1900-01-01" required>
         <label> Edad: </label>
-        <input type="number" name="edad" maxlength="2" required>
+        <input type="number" name="edad" maxlength="2" pattern="[0-9]{10}" required>
         <label> Dni: </label>
-        <input type="number" name="dni" maxlength="8" required>
+        <input type="number" name="dni" maxlength="8" pattern="[0-9]" required>
         <label> Email: </label>
-        <input type="email" name="email" maxlength="20" required>
+        <input type="email" name="email" maxlength="20" placeholder="ejemplo@xmail.com" required>
         <label> Telefono 1: </label>
-        <input type="number" name="telefono1" maxlength="10" required>
-        <label> Telefono 2: </label>
-        <input type="number" name="telefono2" maxlength="10">
+        <input type="number" name="telefono1" maxlength="10" pattern="[0-9]{10}" placeholder="011745356" required>
+        <label> Telefono 2 (opcional): </label>
+        <input type="number" name="telefono2" maxlength="10" pattern="[0-9]{10}" placeholder="011745356">
 
         <div>
             <button type="submit">
