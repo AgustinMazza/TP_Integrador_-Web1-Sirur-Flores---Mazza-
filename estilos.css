@@ -1,10 +1,8 @@
-
-
 body {
     display: flex;
     flex-direction: column;
     /*me permite usar el align items*/
- 
+
 
     margin: 0px;
     padding: 0px;
@@ -14,22 +12,27 @@ body {
 }
 
 .menu {
-
     margin-top: 10px;
     margin-left: 10px;
+
+    color: #3B82F6;
 }
 
 main {}
 
 h1 {
-    color: #1E3A8A;
+    color: #3B82F6;
     font-weight: bold;
+
+    margin: auto;
 }
-h2{
+
+h2 {
     text-align: center;
     margin: 0px;
 }
-p{
+
+p {
     text-align: justify;
     margin: 0px;
 }
@@ -43,56 +46,59 @@ form {
     flex-direction: column;
     padding: 35px;
     width: 400px;
-    margin: 80px auto;
+    margin: auto;
     gap: 10px;
+    font-weight: bold;
+    color: #3B82F6;
 }
 
 select {
     border-style: hidden;
     background: transparent;
-    border-bottom: 2px rgb(0, 47, 255) solid;
-
+    border-bottom: 2px #3B82F6 solid;
+    color: #3B82F6;
+    text-align: right;
 }
 
 div {
     display: flex;
     justify-content: space-around;
-
 }
 
 #carru {
     justify-content: space-evenly;
 }
-img{
+
+img {
     border-radius: 10px;
 }
 
 button {
-    background-color: black;
+    background-color: #3B82F6;
     border-style: hidden;
     color: white;
     border-radius: 6px;
     font-weight: bold;
     font-size: medium;
-    height: 20px;
-    width: 60px;
+    height: 40px;
+    width: 120px;
     margin-top: 30px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     /*justify-content: space-between;
     /*margin: 10px;*/
     cursor: pointer;
 }
 
 .Totalproductos {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    
-    
+
+
 }
 
-article{
+article {
     border-radius: 10px;
     box-shadow: 0px 0px 2px #3B82F6;
     min-width: 100px;
@@ -102,9 +108,12 @@ article{
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .producto:hover {
-    transform: scale(1.05); /* agranda un poco */
-    box-shadow: 4px 4px 15px rgba(0,0,0,0.2); /* sombra más fuerte */
+    transform: scale(1.05);
+    /* agranda un poco */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    /* sombra más fuerte */
 }
 
 
