@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilocontacto.css">
 
 </head>
 
@@ -18,83 +18,131 @@
         </nav>
     </header>
 
-    <h1>Formulario de contacto</h1>
-    <main>
-        <form name="formularioContacto" onsubmit="return validarFormulario()">
-            <label> Nombre: </label>
-            <input type=" text" name="nombre" placeholder="Escribre tu nombre.-" maxlength="20">
-            <label> Apellido: </label>
-            <input type="text" name="apellido" maxlength="20" placeholder="Escribre tu apellido.-">
-            <label> Dni: </label>
-            <input type="number" name="dni" maxlength="8" pattern="[0-9]" placeholder="20456789">
-            <label> Email: </label>
-            <input type="email" name="email" maxlength="20" placeholder="ejemplo@xmail.com" novalidate>
-            <label> Telefono: </label>
-            <input type="tel" name="telefono" pattern="[0-9]" placeholder="011745356">
-            <button type="submit" name="boton"> Contáctanos</button>
-        </form>
 
-        <script>
-            function validarFormulario() {
-                const formulario = document.forms['formularioContacto'];
+    <main class="contactoFull">
 
-                const inputNombre = formulario['nombre'];
-                if (inputNombre.value === '') {
-                    inputNombre.style.borderColor = 'red'
-                } else {
-                    inputNombre.style.borderColor = 'green'
-                }
-
-                const inputApellido = formulario['apellido'];
-                if (inputApellido.value === '') {
-                    inputApellido.style.borderColor = 'red'
-                } else {
-                    inputApellido.style.borderColor = 'green'
-                }
-
-                const inputDNI = formulario['dni'];
-                if (inputDNI.value === '') {
-                    inputDNI.style.borderColor = 'red'
-                } else {
-                    inputDNI.style.borderColor = 'green'
-                }
-
-                const inputEmail = formulario['email'];
-                if (inputEmail.value === '') {
-                    inputEmail.style.borderColor = 'red'
-                } else {
-                    inputEmail.style.borderColor = 'green'
-                }
-
-                const inputTelefono = formulario['email'];
-                if (inputTelefono.value === '') {
-                    inputTelefono.style.borderColor = 'red'
-                } else {
-                    inputTelefono.style.borderColor = 'green'
-                }
-
-
-                return false;
-            }
-
-            /*const form = document.getElementById('formulario')
-            form.addEventListener('submit', function (event){
-                console.log(event);
-                event.preventDefault;
-            })*/
-        </script>
-
-        <div name="formInfo">
+        <section class="infoNuestra">
             <h1> Donde encontrarnos</h1>
-            <label>Ubicación</label>
+            <p>Ubicación</p>
             <div>Av Sucre 1541, San Luis, Argentina</div>
-            <label>Telefono</label>
+            <p>Telefono</p>
             <div>2664 458812 / </div>
-            <label>WhatsApp</label>
+            <p>WhatsApp</p>
             <div>+549 2664 231544</div>
-            <label>Email</label>
+            <p>Email</p>
             <div>MSautomotores@gmail.com</div>
-        </div>
+        </section>
+
+        <section class="infoUsuario">
+
+            <h1>Contáctate con nosotros:</h1>
+            <form name="formularioContacto" onsubmit="return validarFormulario()" novalidate>
+                <label> Nombre: </label>
+                <input type=" text" name="nombre" id="nombre" placeholder="Escribre tu nombre.-" maxlength="20">
+                <span id="errorNombre" class="error"></span>
+
+                <label> Apellido: </label>
+                <input type="text" name="apellido" maxlength="20" placeholder="Escribre tu apellido.-">
+                <span id="errorApellido" class="error"></span>
+
+                <label> Dni: </label>
+                <input type="number" name="dni" maxlength="8" pattern="[0-9]" placeholder="20456789">
+                <span id="errorDNI" class="error"></span>
+
+                <label> Email: </label>
+                <input type="email" name="email" maxlength="40" placeholder="ejemplo@xmail.com">
+                <span id="errorEmail" class="error"></span>
+
+                <label> Telefono: </label>
+                <input type="tel" name="telefono" pattern="[0-9]" placeholder="011745356">
+                <span id="errorTelefono" class="error"></span>
+
+                <button type="submit" name="boton"> Contáctanos</button>
+            </form>
+
+            <script>
+                function validarFormulario() {
+
+                    let validado = true;
+
+                    const formulario = document.forms['formularioContacto'];
+
+                    const expRegName = /^([A-Z][a-z]+)(\s)?([A-Z][a-z]+)?$/;
+                    const expRegApellido = /^([A-Z][a-z]+)(\s)?([A-Z][a-z]+)?$/;
+                    const expRegDNI = /^([0-9]{1,8})$/;
+                    const expRegEmail = /^(\w)+@(\w)+\.com(\.ar)?$/;
+                    const expRegTelefono = /^([0-9]{1,11})$/;
+
+                    const errorName = document.getElementById('errorNombre');
+                    const errorApellido = document.getElementById('errorApellido');
+                    const errorDNI = document.getElementById('errorDNI');
+                    const errorEmail = document.getElementById('errorEmail');
+                    const errorTelefono = document.getElementById('errorTelefono');
+
+                    const inputNombre = formulario['nombre'];
+                    if (inputNombre.value === '' || !expRegName.test(inputNombre.value)) {
+                        inputNombre.style.borderColor = 'red'
+                        errorName.textContent = "**Campo obligatorio";
+                        validado = false;
+                    } else {
+                        inputNombre.style.borderColor = 'green';
+                        errorName.textContent = "";
+                    }
+
+                    const inputApellido = formulario['apellido'];
+                    if (inputApellido.value === '' || !expRegApellido.test(inputApellido.value)) {
+                        inputApellido.style.borderColor = 'red';
+                        errorApellido.textContent = "**Campo obligatorio";
+                        validado = false;
+                    } else {
+                        inputApellido.style.borderColor = 'green';
+                        errorApellido.textContent = "";
+                    }
+
+                    const inputDNI = formulario['dni'];
+                    if (inputDNI.value === '' || !expRegDNI.test(inputDNI.value)) {
+                        inputDNI.style.borderColor = 'red';
+                        errorDNI.textContent = "**Campo obligatorio";
+                        validado = false;
+                    } else {
+                        inputDNI.style.borderColor = 'green';
+                        errorDNI.textContent = "";
+                    }
+
+                    const inputEmail = formulario['email'];
+                    if (inputEmail.value === '' || !expRegEmail.test(inputEmail.value)) {
+                        inputEmail.style.borderColor = 'red';
+                        errorEmail.textContent = "**Campo obligatorio";
+                        validado = false;
+                    } else {
+                        inputEmail.style.borderColor = 'green';
+                        errorEmail.textContent = "";
+                    }
+
+                    const inputTelefono = formulario['telefono'];
+                    if (inputTelefono.value === '' || !expRegTelefono.test(inputTelefono.value)) {
+                        inputTelefono.style.borderColor = 'red';
+                        errorTelefono.textContent = "**Campo obligatorio";
+                        validado = false;
+                    } else {
+                        inputTelefono.style.borderColor = 'green';
+                        errorTelefono.textContent = "";
+                    }
+
+
+                    return validado;
+                }
+
+
+                /*const form = document.getElementById('formulario')
+                form.addEventListener('submit', function (event){
+                    console.log(event);
+                    event.preventDefault;
+                })*/
+            </script>
+        </section>
+
+
     </main>
 
 

@@ -1,0 +1,99 @@
+.contactoFull {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 60 px;
+    padding: 40 px;
+    flex-wrap: wrap;
+
+}
+
+.infoNuestra {
+    background-color: #b3d2ec;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 5);
+    font-weight: bold;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infoNuestra h1 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.infoNuestra p {
+    text-align: left;
+    margin-bottom: 30px;
+
+}
+
+.infoNuestra div {
+    text-align: right;
+    margin-bottom: 30px;
+
+}
+
+.infoUsuario {
+    background-color: #b3d2ec;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 20);
+    margin-left: 40px;
+
+}
+
+.infoUsuario h1 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.infoUsuario input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.error {
+    color: rgb(255, 0, 0);
+    font-size: 12px;
+    font-style: italic;
+}
+
+button {
+    align-self: center;
+    background-color: black;
+    border-style: hidden;
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: medium;
+    height: 50px;
+    width: 150px;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    /*justify-content: space-between;
+    /*margin: 10px;*/
+    cursor: pointer;
+}
+
+form {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 35px;
+    width: 400px;
+    margin: auto;
+    gap: 10px;
+    font-weight: bold;
+    color: black;
+}
