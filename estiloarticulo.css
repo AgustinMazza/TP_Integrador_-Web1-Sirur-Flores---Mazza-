@@ -1,0 +1,74 @@
+.menu {
+    margin: auto;
+    text-align: end;
+    padding-top: 20px;
+
+    background-color: #3B82F6;
+    border-radius: 5px;
+
+    font-size: 20px;
+    gap: 50px;
+    margin-bottom: 20px;
+    height: 50px;
+}
+
+a {
+    margin: 20px;
+    color: white;
+}
+
+h1 {
+    color: black;
+    font-weight: bold;
+    margin: auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /*me permite usar el align items*/
+
+    margin: 0px;
+    padding: 0px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E0F2FE;
+}
+
+.Totalproductos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+article {
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px #3B82F6;
+    min-width: 100px;
+    max-width: 250px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+    /* agranda un poco */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    /* sombra más fuerte */
+}
+
+#img {
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    /*no se achica la imagen*/
+}
+
+img {
+    display: flex;
+    border-radius: 10px;
+    max-width: 250px;
+    max-height: 151px;
+}

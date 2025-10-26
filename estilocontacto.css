@@ -1,3 +1,33 @@
+.menu {
+    text-align: end;
+    padding-top: 20px;
+
+    background-color: #3B82F6;
+    border-radius: 5px;
+
+    font-size: 20px;
+
+    margin-bottom: 20px;
+    height: 50px;
+}
+
+a {
+    margin: 20px;
+    color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /*me permite usar el align items*/
+
+    margin: 0px;
+    padding: 0px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E0F2FE;
+}
+
 .contactoFull {
     display: flex;
     justify-content: center;
@@ -27,6 +57,8 @@
 .infoNuestra p {
     text-align: left;
     margin-bottom: 30px;
+    font-weight: bold;
+    font-size: larger;
 
 }
 
