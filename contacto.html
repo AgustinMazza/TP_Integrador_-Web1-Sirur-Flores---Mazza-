@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="stylesheet" href="estilocontacto.css">
+    <link rel="icon" href="bmw icono.png">
 
 </head>
 
@@ -22,17 +23,18 @@
     <main class="contactoFull">
 
         <section class="infoNuestra">
-            <h1> Donde encontrarnos</h1>
-            <p>Ubicación</p>
+            <h1> Donde encontrarnos:</h1>
+            <br>
+            <p><span>📍</span>Ubicación:</p>
             <div>Av Sucre 1541, San Luis, Argentina</div>
-            <p>Telefono</p>
-            <div>2664 458812 / 2664 894574 </div>
-            <p>WhatsApp</p>
-            <div>+549 2664 231544 / +549 2664 89457</div>
-            <p>Email</p>
+            <p><span>📞</span>Telefono:</p>
+            <div>2664-458812 / 2664-894574 </div>
+            <p><span>💬</span>WhatsApp:</p>
+            <div>+549 2664-231544 / +549 2664-89457</div>
+            <p><span>📧</span>Email:</p>
             <div>MSautomotores@gmail.com</div>
-            <br><br><br><br>
-            <p style="text-align: center; font-size: larger; font-weight: bolder;">© Derechos reservados 2025</p>
+            
+            <p style="text-align:center; font-size: larger; font-weight: bolder; margin-top: 40%;">© Derechos reservados 2025</p>
 
         </section>
 
@@ -70,8 +72,8 @@
 
                     const formulario = document.forms['formularioContacto'];
 
-                    const expRegName = /^([A-Z][a-z]+)(\s)?([A-Z][a-z]+)?$/;
-                    const expRegApellido = /^([A-Z][a-z]+)(\s)?([A-Z][a-z]+)?$/;
+                    const expRegName = /^([A-Za-z][a-z]+)(\s)?([A-Za-z][a-z]+)?$/;
+                    const expRegApellido = /^([A-Za-z][a-z]+)(\s)?([A-Za-z][a-z]+)?$/;
                     const expRegDNI = /^([0-9]{1,8})$/;
                     const expRegEmail = /^(\w)+@(\w)+\.com(\.ar)?$/;
                     const expRegTelefono = /^([0-9]{1,11})$/;

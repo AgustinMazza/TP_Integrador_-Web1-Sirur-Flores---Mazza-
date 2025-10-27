@@ -3,7 +3,6 @@
     padding-top: 20px;
 
     background-color: #3B82F6;
-    border-radius: 5px;
 
     font-size: 20px;
 
@@ -14,6 +13,11 @@
 a {
     margin: 20px;
     color: white;
+}
+
+section{
+
+    margin: 20px;
 }
 
 body {
@@ -56,15 +60,15 @@ body {
 
 .infoNuestra p {
     text-align: left;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
     font-weight: bold;
     font-size: larger;
 
 }
 
 .infoNuestra div {
-    text-align: right;
-    margin-bottom: 30px;
+    text-align:right;
+    /*margin-bottom: 30px;*/
 
 }
 
@@ -74,7 +78,7 @@ body {
     border-radius: 10px;
     width: 400px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 20);
-    margin-left: 40px;
+    /*margin-left: 40px; lo saque asi queda alineado*/
 
 }
 
