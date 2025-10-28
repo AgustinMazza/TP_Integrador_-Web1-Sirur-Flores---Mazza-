@@ -16,3 +16,100 @@ a {
     margin: 20px;
     color: white;
 }
+
+#img {
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    /*no se achica la imagen*/
+}
+
+img {
+    display: flex;
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    /*me permite usar el align items*/
+
+    margin: 0px;
+    padding: 0px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E0F2FE;
+}
+
+button {
+    background-color: black;
+    border-style: hidden;
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: medium;
+    height: 40px;
+    width: 120px;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    /*justify-content: space-between;
+    /*margin: 10px;*/
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    margin: 0px;
+}
+
+h2 {
+    text-align: center;
+    margin: 0px;
+}
+
+p {
+    text-align: justify;
+    margin: 0px;
+}
+
+div {
+    display: flex;
+    justify-content: space-around;
+}
+
+div #Info {
+    font-size: medium;
+    color: #1E3A8A;
+
+    flex-direction: column;
+}
+
+.Carrusel {
+    display: flex;
+    /*para que pueda moverse en sentido horizontal va por defecto */
+    scroll-snap-type: x mandatory;
+    /*como que se encaja cuando moves para izquierda o derecha*/
+
+    gap: 5px;
+    padding: 25px;
+    cursor: pointer;
+}
+
+.Transicion {
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.Transicion:hover {
+    transform: scale(1.1);
+    /* agranda un poco */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+    /* sombra más fuerte */
+}
+
+#carru {
+    justify-content: space-evenly;
+}

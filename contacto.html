@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="stylesheet" href="estilocontacto.css">
-    <link rel="icon" href="bmw icono.png">
 
 </head>
 
@@ -27,21 +26,30 @@
             <br>
             <p><span>📍</span>Ubicación:</p>
             <div>Av Sucre 1541, San Luis, Argentina</div>
+            <br>
             <p><span>📞</span>Telefono:</p>
             <div>2664-458812 / 2664-894574 </div>
+            <br>
             <p><span>💬</span>WhatsApp:</p>
             <div>+549 2664-231544 / +549 2664-89457</div>
+            <br>
             <p><span>📧</span>Email:</p>
             <div>MSautomotores@gmail.com</div>
-            
-            <p style="text-align:center; font-size: larger; font-weight: bolder; margin-top: 40%;">© Derechos reservados 2025</p>
+            <br>
+            <p><span>💬</span>Horarios de atención:</p>
+            <div>Lunes a viernes de 9 a 18 horas</div>
+            <br>
+            <div>Sabados de 10 a 13 horas</div>
+
+            <p style="text-align:center; font-size: larger; font-weight: bolder; margin-top: 40%;">© Derechos reservados
+                2025</p>
 
         </section>
 
         <section class="infoUsuario">
 
             <h1>Contáctate con nosotros:</h1>
-            <form name="formularioContacto" onsubmit="return validarFormulario()" novalidate>
+            <form id="formu" name="formularioContacto" onsubmit="return validarFormulario()" novalidate>
                 <label> Nombre: </label>
                 <input type=" text" name="nombre" id="nombre" placeholder="Escribre tu nombre.-" maxlength="20">
                 <span id="errorNombre" class="error"></span>
@@ -62,10 +70,31 @@
                 <input type="tel" name="telefono" pattern="[0-9]" placeholder="011745356">
                 <span id="errorTelefono" class="error"></span>
 
-                <button type="submit" name="boton"> Contáctanos</button>
+                <button onclick="guardarDatos()" name="boton"> Contáctanos</button>
             </form>
 
             <script>
+                const datosClientes = document.getElementById("formu");
+                const miFormu = document.forms["formularioContacto"];
+
+                const nombreCliente = miFormu["nombre"];
+                const apellidoCliente = miFormu["apellido"];
+                const dniCliente = miFormu["dni"];
+                const emailCliente = miFormu["email"];
+                const telefonoCliente = miFormu["telefono"];
+
+                function guardarDatos() {
+                    if (validarFormulario) {
+                        const nuevoDato = document.createElement("datos")
+                        nuevoDato.textContent = nombreCliente.value + " " + apellidoCliente.value + " " + dniCliente.value + " " + emailCliente.value + " " + telefonoCliente.value
+                        datosClientes.appendChild(nuevoDato)
+                        console.log(datosClientes)
+                    } else {
+                        return flase;
+                    }
+                }
+
+
                 function validarFormulario() {
 
                     let validado = true;
@@ -84,59 +113,62 @@
                     const errorEmail = document.getElementById('errorEmail');
                     const errorTelefono = document.getElementById('errorTelefono');
 
-                    const inputNombre = formulario['nombre'];
-                    if (inputNombre.value === '' || !expRegName.test(inputNombre.value)) {
-                        inputNombre.style.borderColor = 'red'
+
+                    if (nombreCliente.value === '' || !expRegName.test(nombreCliente.value)) {
+                        nombreCliente.style.borderColor = 'red'
                         errorName.textContent = "**Campo obligatorio";
                         validado = false;
                     } else {
-                        inputNombre.style.borderColor = 'green';
+                        nombreCliente.style.borderColor = 'green';
                         errorName.textContent = "";
                     }
 
-                    const inputApellido = formulario['apellido'];
-                    if (inputApellido.value === '' || !expRegApellido.test(inputApellido.value)) {
-                        inputApellido.style.borderColor = 'red';
+                    if (apellidoCliente.value === '' || !expRegApellido.test(apellidoCliente.value)) {
+                        apellidoCliente.style.borderColor = 'red';
                         errorApellido.textContent = "**Campo obligatorio";
                         validado = false;
                     } else {
-                        inputApellido.style.borderColor = 'green';
+                        apellidoCliente.style.borderColor = 'green';
                         errorApellido.textContent = "";
                     }
 
-                    const inputDNI = formulario['dni'];
-                    if (inputDNI.value === '' || !expRegDNI.test(inputDNI.value)) {
-                        inputDNI.style.borderColor = 'red';
+                    if (dniCliente.value === '' || !expRegDNI.test(dniCliente.value)) {
+                        dniCliente.style.borderColor = 'red';
                         errorDNI.textContent = "**Campo obligatorio";
                         validado = false;
                     } else {
-                        inputDNI.style.borderColor = 'green';
+                        dniCliente.style.borderColor = 'green';
                         errorDNI.textContent = "";
                     }
 
-                    const inputEmail = formulario['email'];
-                    if (inputEmail.value === '' || !expRegEmail.test(inputEmail.value)) {
-                        inputEmail.style.borderColor = 'red';
+                    if (emailCliente.value === '' || !expRegEmail.test(emailCliente.value)) {
+                        emailCliente.style.borderColor = 'red';
                         errorEmail.textContent = "**Campo obligatorio";
                         validado = false;
                     } else {
-                        inputEmail.style.borderColor = 'green';
+                        emailCliente.style.borderColor = 'green';
                         errorEmail.textContent = "";
                     }
 
-                    const inputTelefono = formulario['telefono'];
-                    if (inputTelefono.value === '' || !expRegTelefono.test(inputTelefono.value)) {
-                        inputTelefono.style.borderColor = 'red';
+                    if (telefonoCliente.value === '' || !expRegTelefono.test(telefonoCliente.value)) {
+                        telefonoCliente.style.borderColor = 'red';
                         errorTelefono.textContent = "**Campo obligatorio";
                         validado = false;
                     } else {
-                        inputTelefono.style.borderColor = 'green';
+                        telefonoCliente.style.borderColor = 'green';
                         errorTelefono.textContent = "";
                     }
+                    //falta guardar los datos con create element.
 
 
                     return validado;
                 }
+
+                const formu = document.getElementById("formu");
+
+                form.add
+
+
 
 
                 /*const form = document.getElementById('formulario')
