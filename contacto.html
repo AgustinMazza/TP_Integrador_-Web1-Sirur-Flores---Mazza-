@@ -5,16 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="estilocontacto.css">
+    <link rel="stylesheet" href="css/estilocontacto.css">
+    <link rel="icon" href="bmw icono.png">
 
 </head>
 
 <body>
     <header>
         <nav class="menu">
-            <a href="index.html">Inicio</a>
-            <a href="articulo.html">Articulos</a>
-            <a href="contacto.html">Contacto</a>
+            <div id="MS">MS Automotores</div>
+            <div class="links">
+                <a href="index.html">Inicio</a>
+                <a href="articulo.html">Articulos</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+
         </nav>
     </header>
 
@@ -23,25 +28,19 @@
 
         <section class="infoNuestra">
             <h1> Donde encontrarnos:</h1>
-            <br>
-            <p><span>📍</span>Ubicación:</p>
-            <div>Av Sucre 1541, San Luis, Argentina</div>
-            <br>
             <p><span>📞</span>Telefono:</p>
             <div>2664-458812 / 2664-894574 </div>
-            <br>
             <p><span>💬</span>WhatsApp:</p>
             <div>+549 2664-231544 / +549 2664-89457</div>
-            <br>
             <p><span>📧</span>Email:</p>
             <div>MSautomotores@gmail.com</div>
-            <br>
-            <p><span>💬</span>Horarios de atención:</p>
+            <p><span>🕑️</span>Horarios de atención:</p>
             <div>Lunes a viernes de 9 a 18 horas</div>
-            <br>
             <div>Sabados de 10 a 13 horas</div>
-
-            <p style="text-align:center; font-size: larger; font-weight: bolder; margin-top: 40%;">© Derechos reservados
+            <p><span>📍</span>Ubicación:</p>
+            <div>Av Sucre 1541, San Luis, Argentina</div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.0663514687767!2d-66.33205685967908!3d-33.290927089471204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d43eb3067a42b9%3A0x848bec1f6ed03797!2sAv.%20Sucre%201541%2C%20D5700DCF%20San%20Luis!5e0!3m2!1ses-419!2sar!4v1761618510380!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p style="text-align:center; font-size: larger; font-weight: bolder; margin-top: 10%;">© Derechos reservados
                 2025</p>
 
         </section>
@@ -69,11 +68,11 @@
                 <label> Telefono: </label>
                 <input type="tel" name="telefono" pattern="[0-9]" placeholder="011745356">
                 <span id="errorTelefono" class="error"></span>
-
+                <br>
                 <button onclick="guardarDatos()" name="boton"> Contáctanos</button>
             </form>
 
-            <script>
+            <script> //habria que hacer esto en .js
                 const datosClientes = document.getElementById("formu");
                 const miFormu = document.forms["formularioContacto"];
 

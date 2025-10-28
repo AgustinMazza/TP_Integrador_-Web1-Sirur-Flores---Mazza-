@@ -1,18 +1,26 @@
 .menu {
-    text-align: end;
-    padding-top: 20px;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 40px;
     background-color: #3B82F6;
-
-    font-size: 20px;
-
-    margin-bottom: 20px;
-    height: 50px;
+    height: 60px;
 }
 
-a {
-    margin: 20px;
+#MS{
     color: white;
+    font-size: 22px;
+    font-weight: bold;
+} 
+
+.links a {
+    color: white;
+    font-size: 22px;
+    margin-left: 30px;
+}
+
+.links a:hover{
+    text-decoration: underline;
 }
 
 section {
@@ -60,7 +68,6 @@ body {
 
 .infoNuestra p {
     text-align: left;
-    /*margin-bottom: 30px;*/
     font-weight: bold;
     font-size: larger;
 
@@ -68,8 +75,6 @@ body {
 
 .infoNuestra div {
     text-align: right;
-    /*margin-bottom: 30px;*/
-
 }
 
 .infoUsuario {
