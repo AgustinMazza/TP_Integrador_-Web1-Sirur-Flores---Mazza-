@@ -40,9 +40,9 @@
         </div>
 
         <section>
-            <div >
-               
-                
+            <div>
+
+
                 <button onclick="pool()">←</button>
                 <img class="carrusel" id="imagenEspecial" src="comienzoCarrusel.png">
                 <button onclick="loop()">→</button>
@@ -63,32 +63,39 @@
                 "img/Vwamarok.jpeg"
             ];
 
-            let indexImagenes=0;
+            let indexImagenes = 0;
 
-            function loop(){
+            function loop() {
                 let imagenEspecial = document.getElementById("imagenEspecial");
                 imagenEspecial.alt = 'No se encontro img';
                 imagenEspecial.src = imagenes[indexImagenes];
-                if(indexImagenes==imagenes.length-1){
-                    indexImagenes=0;
-                }else{
+                if (indexImagenes == imagenes.length - 1) {
+                    indexImagenes = 0;
+                } else {
                     indexImagenes++;
                 }
             }
 
-            function pool(){
+            function pool() {
                 let imagenEspecial = document.getElementById("imagenEspecial");
                 imagenEspecial.alt = 'No se encontro img';
                 imagenEspecial.src = imagenes[indexImagenes];
-                if(indexImagenes==0){
-                    indexImagenes=imagenes.length-1;
-                }else{
+                if (indexImagenes == 0) {
+                    indexImagenes = imagenes.length - 1;
+                } else {
                     indexImagenes--;
                 }
             }
 
         </script>
     </main>
+
+    <footer>
+        <div>MS Automotores - Mazza - Sirur Flores</div>
+        <div>© Derechos reservados
+            2025</div>
+
+    </footer>
 
 </body>
 
