@@ -38,9 +38,9 @@
         <br>
         <section>
             <div>
-                <button onclick="pool()">←</button>
+                <button onclick="pool()">«</button>
                 <img class="carrusel" id="imagenEspecial" src="comienzoCarrusel.png">
-                <button onclick="loop()">→</button>
+                <button onclick="loop()">»</button>
             </div>
 
         </section>
@@ -63,23 +63,25 @@
             function loop() {
                 let imagenEspecial = document.getElementById("imagenEspecial");
                 imagenEspecial.alt = 'No se encontro img';
-                imagenEspecial.src = imagenes[indexImagenes];
+
                 if (indexImagenes == imagenes.length - 1) {
                     indexImagenes = 0;
                 } else {
                     indexImagenes++;
                 }
+                imagenEspecial.src = imagenes[indexImagenes];
             }
 
             function pool() {
                 let imagenEspecial = document.getElementById("imagenEspecial");
                 imagenEspecial.alt = 'No se encontro img';
-                imagenEspecial.src = imagenes[indexImagenes];
+
                 if (indexImagenes == 0) {
                     indexImagenes = imagenes.length - 1;
                 } else {
                     indexImagenes--;
                 }
+                imagenEspecial.src = imagenes[indexImagenes];
             }
 
         </script>
@@ -87,9 +89,7 @@
 </body>
 <footer>
     <div>MS Automotores - Mazza - Sirur Flores</div>
-    <div>© Derechos reservados
-        2025</div>
-
+    <div>© Derechos reservados 2025</div>
 </footer>
 
 </html>

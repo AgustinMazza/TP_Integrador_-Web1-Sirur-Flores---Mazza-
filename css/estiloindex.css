@@ -23,30 +23,20 @@
     text-decoration: underline;
 }
 
-#img {
-    flex-shrink: 0;
-    width: 10px;
-    height: 10px;
-    /*no se achica la imagen*/
-}
-
-img {
-    display: flex;
-    border-radius: 10px;
-    max-width: 100%;
-    height: auto;
-}
-
 footer {
-    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 99%;
+    margin-top: 10px;
+
     font-size: larger;
     font-weight: bolder;
-    margin-top: 10%;
+    
     background-color: #3B82F6;
     color: #E0F2FE;
-    padding: 25px;
+    padding: 8px;
 
-    display: flex;
+    display:flex;
     justify-content: space-between;
 }
 
@@ -54,8 +44,7 @@ footer {
 body {
     display: flex;
     flex-direction: column;
-    /*me permite usar el align items*/
-
+    
     margin: 0px;
     padding: 0px;
 
