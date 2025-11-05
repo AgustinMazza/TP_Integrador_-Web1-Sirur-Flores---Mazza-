@@ -32,7 +32,17 @@ primero, volver al último.
 todo el sitio.
 ● El sitio debe estar subido a Github y se debe utilizar github pages para desplegarlo
 en la web.
- 
- img(Ancho 250-Alto 141)
 
 
+Tareas pendientes:
+
+preguntar flexbox
+AÑADIR TODO A .JS
+yo:
+    acercar botones carrusel
+    agregar un poco de infoirmacion gral al index
+    Agregar foto al background
+    cambiar la fuente
+jere:
+    Agregar info contacto mandados usandoreateElement).
+    
