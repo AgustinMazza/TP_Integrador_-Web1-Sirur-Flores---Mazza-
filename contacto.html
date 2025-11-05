@@ -53,7 +53,7 @@
             <h1>Contáctate con nosotros:</h1>
             <form id="formu" name="formularioContacto" onsubmit="return validarFormulario()" novalidate>
                 <label> Nombre: </label>
-                <input type=" text" name="nombre" id="nombre" placeholder="Escribre tu nombre.-" maxlength="20">
+                <input type="text" name="nombre" id="nombre" placeholder="Escribre tu nombre.-" maxlength="20">
                 <span id="errorNombre" class="error"></span>
 
                 <label> Apellido: </label>
@@ -61,7 +61,7 @@
                 <span id="errorApellido" class="error"></span>
 
                 <label> Dni: </label>
-                <input type="number" name="dni" maxlength="8" pattern="[0-9]" placeholder="20456789">
+                <input type="number" name="dni" maxlength="8" placeholder="20456789">
                 <span id="errorDNI" class="error"></span>
 
                 <label> Email: </label>
@@ -88,9 +88,23 @@
                 function guardarDatos() {
                     if (validarFormulario) {
                         const nuevoDato = document.createElement("datos")
-                        nuevoDato.textContent = nombreCliente.value + " " + apellidoCliente.value + " " + dniCliente.value + " " + emailCliente.value + " " + telefonoCliente.value
+                        const titulo1 = document.createElement("div")
+                        const titulo2 = document.createElement("div")
+
+
+                        titulo1.textContent = "Formulario enviado con exito!"
+                        nuevoDato.textContent = "Apellido: " + ApellidoCliente.value + ",  "
+                            + nombreCliente.value + ". Dni " + dniCliente.value + ", email "
+                            + emailCliente.value + " y su telefono: " + telefonoCliente.value
+                        titulo2.textContent = "-MS Automotores-!"
                         datosClientes.appendChild(nuevoDato)
-                        console.log(datosClientes)
+                        /*console.log(datosClientes)*/
+
+                        nuevoDato.style.backgroundColor = "blue";
+                        nuevoDato.style.color = "white";
+                        nuevoDato.style.borderRadius = "1rem";
+                        nuevoDato.style.border = "1px solid black";
+                        nuevoDato.style.fontSize = "1rem";
                     } else {
                         return flase;
                     }
