@@ -20,12 +20,12 @@ footer {
 
     font-size: larger;
     font-weight: bolder;
-    
+
     background-color: #3B82F6;
     color: #E0F2FE;
     padding: 8px;
 
-    display:flex;
+    display: flex;
     justify-content: space-between;
 }
 

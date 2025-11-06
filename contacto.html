@@ -49,7 +49,6 @@
         </section>
 
         <section class="infoUsuario">
-
             <h1>Contáctate con nosotros:</h1>
             <form id="formu" name="formularioContacto" onsubmit="return validarFormulario()" novalidate>
                 <label> Nombre: </label>
@@ -72,137 +71,18 @@
                 <input type="tel" name="telefono" pattern="[0-9]" placeholder="011745356">
                 <span id="errorTelefono" class="error"></span>
                 <br>
-                <button onclick="guardarDatos()" name="boton"> Contáctanos</button>
+                <button type="submit" name="boton"> Contáctanos</button>
+
             </form>
 
-            <script> //habria que hacer esto en .js
-                const datosClientes = document.getElementById("formu");
-                const miFormu = document.forms["formularioContacto"];
-
-                const nombreCliente = miFormu["nombre"];
-                const apellidoCliente = miFormu["apellido"];
-                const dniCliente = miFormu["dni"];
-                const emailCliente = miFormu["email"];
-                const telefonoCliente = miFormu["telefono"];
-
-                function guardarDatos() {
-                    if (validarFormulario) {
-                        const nuevoDato = document.createElement("datos")
-                        const titulo1 = document.createElement("div")
-                        const titulo2 = document.createElement("div")
-
-
-                        titulo1.textContent = "Formulario enviado con exito!"
-                        nuevoDato.textContent = "Apellido: " + ApellidoCliente.value + ",  "
-                            + nombreCliente.value + ". Dni " + dniCliente.value + ", email "
-                            + emailCliente.value + " y su telefono: " + telefonoCliente.value
-                        titulo2.textContent = "-MS Automotores-!"
-                        datosClientes.appendChild(nuevoDato)
-                        /*console.log(datosClientes)*/
-
-                        nuevoDato.style.backgroundColor = "blue";
-                        nuevoDato.style.color = "white";
-                        nuevoDato.style.borderRadius = "1rem";
-                        nuevoDato.style.border = "1px solid black";
-                        nuevoDato.style.fontSize = "1rem";
-                    } else {
-                        return flase;
-                    }
-                }
-
-
-                function validarFormulario() {
-
-                    let validado = true;
-
-                    const formulario = document.forms['formularioContacto'];
-
-                    const expRegName = /^([A-Za-z][a-z]+)(\s)?([A-Za-z][a-z]+)?$/;
-                    const expRegApellido = /^([A-Za-z][a-z]+)(\s)?([A-Za-z][a-z]+)?$/;
-                    const expRegDNI = /^([0-9]{1,8})$/;
-                    const expRegEmail = /^(\w)+@(\w)+\.com(\.ar)?$/;
-                    const expRegTelefono = /^([0-9]{1,11})$/;
-
-                    const errorName = document.getElementById('errorNombre');
-                    const errorApellido = document.getElementById('errorApellido');
-                    const errorDNI = document.getElementById('errorDNI');
-                    const errorEmail = document.getElementById('errorEmail');
-                    const errorTelefono = document.getElementById('errorTelefono');
-
-
-                    if (nombreCliente.value === '' || !expRegName.test(nombreCliente.value)) {
-                        nombreCliente.style.borderColor = 'red'
-                        errorName.textContent = "**Campo obligatorio";
-                        validado = false;
-                    } else {
-                        nombreCliente.style.borderColor = 'green';
-                        errorName.textContent = "";
-                    }
-
-                    if (apellidoCliente.value === '' || !expRegApellido.test(apellidoCliente.value)) {
-                        apellidoCliente.style.borderColor = 'red';
-                        errorApellido.textContent = "**Campo obligatorio";
-                        validado = false;
-                    } else {
-                        apellidoCliente.style.borderColor = 'green';
-                        errorApellido.textContent = "";
-                    }
-
-                    if (dniCliente.value === '' || !expRegDNI.test(dniCliente.value)) {
-                        dniCliente.style.borderColor = 'red';
-                        errorDNI.textContent = "**Campo obligatorio";
-                        validado = false;
-                    } else {
-                        dniCliente.style.borderColor = 'green';
-                        errorDNI.textContent = "";
-                    }
-
-                    if (emailCliente.value === '' || !expRegEmail.test(emailCliente.value)) {
-                        emailCliente.style.borderColor = 'red';
-                        errorEmail.textContent = "**Campo obligatorio";
-                        validado = false;
-                    } else {
-                        emailCliente.style.borderColor = 'green';
-                        errorEmail.textContent = "";
-                    }
-
-                    if (telefonoCliente.value === '' || !expRegTelefono.test(telefonoCliente.value)) {
-                        telefonoCliente.style.borderColor = 'red';
-                        errorTelefono.textContent = "**Campo obligatorio";
-                        validado = false;
-                    } else {
-                        telefonoCliente.style.borderColor = 'green';
-                        errorTelefono.textContent = "";
-                    }
-                    //falta guardar los datos con create element.
-
-
-                    return validado;
-                }
-
-                const formu = document.getElementById("formu");
-
-                form.add
-
-
-
-
-                /*const form = document.getElementById('formulario')
-                form.addEventListener('submit', function (event){
-                    console.log(event);
-                    event.preventDefault;
-                })*/
-            </script>
+            <script src="./js/validacionesContacto.js"></script>
         </section>
-
-
     </main>
 
 </body>
 <footer>
     <div>MS Automotores - Mazza - Sirur Flores</div>
     <div>© Derechos reservados 2025</div>
-
 </footer>
 
 </html>
