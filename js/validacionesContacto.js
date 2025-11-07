@@ -99,10 +99,6 @@ function guardarDatos() {
         + "<br>Telefono: " + telefonoCliente.value
         + "<br> <br> -MS Automotores-";
 
-    /*nuevoDato.textContent = "Formulario enviado con exito!  Apellido: " + apellidoCliente.value + "\nNombre: "
-        + nombreCliente.value + ".Dni " + dniCliente.value + "Email "
-        + emailCliente.value + "Telefono: " + telefonoCliente.value + "-MS Automotores-";*/
-
     datosClientes.appendChild(nuevoDato)
 
     nuevoDato.style.backgroundColor = '#3B82F6';
