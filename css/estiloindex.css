@@ -3,15 +3,28 @@
     justify-content: space-between;
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
-    padding: 0 40px;
+    
     background-color: #3B82F6;
-    height: 60px;
+    flex-wrap: wrap;
 }
-
+/*
 #MS {
+    margin-top: 10px;
     color: white;
     font-size: 22px;
     font-weight: bold;
+}*/
+
+#MS {
+    width: 450px;
+    height: 150px;
+}
+
+.iconitos{
+    width: 120px;
+    height: auto;
+    margin: 0;
+    padding: 0;
 }
 
 .links a {
@@ -19,6 +32,9 @@
     font-size: 22px;
     margin-left: 30px;
     text-decoration: none;
+
+    display: flex;
+    align-items: center;
 }
 
 .links a:hover {

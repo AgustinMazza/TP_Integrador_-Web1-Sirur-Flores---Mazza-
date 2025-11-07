@@ -78,6 +78,7 @@ body {
 }
 
 article {
+    background-color: #b3d2ec;
     border-radius: 10px;
     box-shadow: 0px 0px 2px #3B82F6;
     min-width: 100px;
@@ -103,9 +104,7 @@ article p {
 
 .producto:hover {
     transform: scale(1.05);
-    /* agranda un poco */
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
-    /* sombra más fuerte */
 }
 
 img {
