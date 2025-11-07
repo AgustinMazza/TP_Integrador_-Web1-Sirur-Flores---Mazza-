@@ -3,24 +3,18 @@
     justify-content: space-between;
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
-    
+
     background-color: #3B82F6;
     flex-wrap: wrap;
 }
-/*
-#MS {
-    margin-top: 10px;
-    color: white;
-    font-size: 22px;
-    font-weight: bold;
-}*/
+
 
 #MS {
     width: 450px;
     height: 150px;
 }
 
-.iconitos{
+.iconitos {
     width: 120px;
     height: auto;
     margin: 0;
@@ -44,7 +38,7 @@
 }
 
 footer {
-    position:fixed;
+    position: fixed;
     bottom: 0;
     width: 99%;
     margin-top: 10px;
@@ -92,10 +86,10 @@ h3 {
     text-align: center;
 }
 
-h2{
+h2 {
     font-family: 'Times New Roman', Times, serif;
     color: #1E3A8A;
-    font-weight:lighter;
+    font-weight: lighter;
 }
 
 h3 {
@@ -116,7 +110,7 @@ div {
     gap: 15px;
 }
 
-#imagenEspecial{
+#imagenEspecial {
     width: 100%;
     height: auto;
     max-height: 400px;

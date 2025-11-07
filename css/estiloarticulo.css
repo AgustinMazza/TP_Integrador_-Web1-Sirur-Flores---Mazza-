@@ -65,17 +65,41 @@ body {
 }
 
 .Totalproductos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+
     max-width: 1000px;
     margin: 0 auto;
     gap: 20px;
+}
+
+.productos {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    flex: 0 0 100%;
+
+    max-width: 100%;
+    padding: 1rem;
+
+    background-color: #b3d2ec;
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 2px #3B82F6;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0;
 }
 
 #producto {
     width: 100%;
     max-width: 300px;
 }
+
+
 
 article {
     background-color: #b3d2ec;
