@@ -71,43 +71,47 @@ function validarFormulario() {
         telefonoCliente.style.borderColor = 'green';
         errorTelefono.textContent = "";
     }
-    //falta guardar los datos con create element.
+
 
     if (!validado) {
         return false;
     }
 
     guardarDatos();
+    miFormu.reset();
+
     return false;
 }
 
 function guardarDatos() {
-    const contenedor = document.createElement("div")
     const nuevoDato = document.createElement("datos")
-    const titulo1 = document.createElement("div")
-    const titulo2 = document.createElement("div")
+
+    nuevoDato.innerHTML = "Formulario enviado con exito! <br> <br> Apellido: " + apellidoCliente.value + "<br>Nombre: "
+        + nombreCliente.value + "<br>Dni " + dniCliente.value + "<br>Email "
+        + emailCliente.value + "<br>Telefono: " + telefonoCliente.value + "<br> <br> -MS Automotores-";
 
 
-    titulo1.textContent = "Formulario enviado con exito!"
-    nuevoDato.textContent = "Apellido: " + apellidoCliente.value + ",  "
-        + nombreCliente.value + ". Dni " + dniCliente.value + ", email "
-        + emailCliente.value + " y su telefono: " + telefonoCliente.value
-    titulo2.textContent = "-MS Automotores-!"
+    /*nuevoDato.textContent = "Formulario enviado con exito!  Apellido: " + apellidoCliente.value + "\nNombre: "
+        + nombreCliente.value + ".Dni " + dniCliente.value + "Email "
+        + emailCliente.value + "Telefono: " + telefonoCliente.value + "-MS Automotores-";*/
 
-
-    datosClientes.appendChild(titulo1)
     datosClientes.appendChild(nuevoDato)
-    datosClientes.appendChild(titulo2)
 
-
-    nuevoDato.style.backgroundColor = "blue";
-    nuevoDato.style.color = "white";
-    nuevoDato.style.borderRadius = "1rem";
-    nuevoDato.style.border = "1px solid black";
-    nuevoDato.style.fontSize = "1rem";
-
+    nuevoDato.style.backgroundColor = '#3B82F6';
+    nuevoDato.style.color = 'white';
+    nuevoDato.style.width = "80%";
+    nuevoDato.style.fontWeight = 'bold';
+    nuevoDato.style.display = 'flex';
+    nuevoDato.style.justifyContent = 'center';
+    nuevoDato.style.padding = '10px';
+    nuevoDato.style.textAlign = 'center';
+    nuevoDato.style.margin = 'auto';
+    nuevoDato.style.borderRadius = '20px';
+    nuevoDato.style.marginTop = '15px';
 
 
 }
+
+
 
 
