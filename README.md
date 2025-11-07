@@ -39,10 +39,7 @@ Tareas pendientes:
 preguntar flexbox
 AÑADIR TODO A .JS
 yo:
-    acercar botones carrusel
     agregar un poco de infoirmacion gral al index
     Agregar foto al background
-    cambiar la fuente
-jere:
-    Agregar info contacto mandados usandoreateElement).
+
     

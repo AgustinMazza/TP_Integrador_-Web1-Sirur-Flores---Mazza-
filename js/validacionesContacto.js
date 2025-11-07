@@ -84,12 +84,20 @@ function validarFormulario() {
 }
 
 function guardarDatos() {
-    const nuevoDato = document.createElement("datos")
 
-    nuevoDato.innerHTML = "Formulario enviado con exito! <br> <br> Apellido: " + apellidoCliente.value + "<br>Nombre: "
-        + nombreCliente.value + "<br>Dni " + dniCliente.value + "<br>Email "
-        + emailCliente.value + "<br>Telefono: " + telefonoCliente.value + "<br> <br> -MS Automotores-";
+    const yaexiste = document.querySelector(".datitos");
+    if (yaexiste) {
+        yaexiste.remove()
+    }
+    const nuevoDato = document.createElement("div")
+    nuevoDato.classList.add("datitos");
 
+    nuevoDato.innerHTML = "Formulario enviado con exito! <br> <br> Apellido: " + apellidoCliente.value
+        + "<br>Nombre: " + nombreCliente.value
+        + "<br>Dni: " + dniCliente.value
+        + "<br>Email: " + emailCliente.value
+        + "<br>Telefono: " + telefonoCliente.value
+        + "<br> <br> -MS Automotores-";
 
     /*nuevoDato.textContent = "Formulario enviado con exito!  Apellido: " + apellidoCliente.value + "\nNombre: "
         + nombreCliente.value + ".Dni " + dniCliente.value + "Email "
@@ -98,6 +106,7 @@ function guardarDatos() {
     datosClientes.appendChild(nuevoDato)
 
     nuevoDato.style.backgroundColor = '#3B82F6';
+    nuevoDato.style.fontFamily= 'Gill Sans';
     nuevoDato.style.color = 'white';
     nuevoDato.style.width = "80%";
     nuevoDato.style.fontWeight = 'bold';
@@ -108,10 +117,4 @@ function guardarDatos() {
     nuevoDato.style.margin = 'auto';
     nuevoDato.style.borderRadius = '20px';
     nuevoDato.style.marginTop = '15px';
-
-
 }
-
-
-
-

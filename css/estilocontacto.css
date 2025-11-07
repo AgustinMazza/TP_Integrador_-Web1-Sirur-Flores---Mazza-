@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Times New Roman', Times, serif;
     padding: 0 40px;
     background-color: #3B82F6;
     height: 60px;
@@ -13,6 +14,20 @@
     font-weight: bold;
 }
 
+.links a {
+    color: white;
+    font-size: 22px;
+    margin-left: 30px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    transform: scale(1.1);
+}
+
 footer {
     bottom: 0;
     width: 99%;
@@ -20,6 +35,7 @@ footer {
 
     font-size: larger;
     font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
 
     background-color: #3B82F6;
     color: #E0F2FE;
@@ -29,18 +45,7 @@ footer {
     justify-content: space-between;
 }
 
-.links a {
-    color: white;
-    font-size: 22px;
-    margin-left: 30px;
-}
-
-.links a:hover {
-    text-decoration: underline;
-}
-
 section {
-
     margin: 20px;
 }
 
@@ -77,12 +82,15 @@ body {
     justify-content: center;
 }
 
-.infoNuestra h1 {
+.infoNuestra h1,
+.infoUsuario h1 {
+    font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     text-align: center;
 }
 
 .infoNuestra p {
+    font-family: 'Courier New', Courier, monospace;
     text-align: left;
     font-weight: bold;
     font-size: larger;
@@ -99,13 +107,6 @@ body {
     border-radius: 10px;
     width: 400px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 20);
-    /*margin-left: 40px; lo saque asi queda alineado*/
-
-}
-
-.infoUsuario h1 {
-    font-weight: bold;
-    text-align: center;
 }
 
 .infoUsuario input {
@@ -113,6 +114,11 @@ body {
     border-radius: 5px;
     padding: 10px;
     font-size: 15px;
+}
+
+.infoUsuario label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
 }
 
 .error {
@@ -132,11 +138,15 @@ button {
     height: 50px;
     width: 150px;
     margin-top: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
-    /*justify-content: space-between;
-    /*margin: 10px;*/
     cursor: pointer;
+
+}
+
+button:hover {
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    transform: scale(1.1);
 }
 
 form {
