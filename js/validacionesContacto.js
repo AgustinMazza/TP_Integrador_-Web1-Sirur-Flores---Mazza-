@@ -100,17 +100,5 @@ function guardarDatos() {
         + "<br> <br> -MS Automotores-";
 
     datosClientes.appendChild(nuevoDato)
-
-    nuevoDato.style.backgroundColor = '#3B82F6';
-    nuevoDato.style.fontFamily= 'Gill Sans';
-    nuevoDato.style.color = 'white';
-    nuevoDato.style.width = "80%";
-    nuevoDato.style.fontWeight = 'bold';
-    nuevoDato.style.display = 'flex';
-    nuevoDato.style.justifyContent = 'center';
-    nuevoDato.style.padding = '10px';
-    nuevoDato.style.textAlign = 'center';
-    nuevoDato.style.margin = 'auto';
-    nuevoDato.style.borderRadius = '20px';
-    nuevoDato.style.marginTop = '15px';
+    nuevoDato.classList.add("estiloCartel");
 }

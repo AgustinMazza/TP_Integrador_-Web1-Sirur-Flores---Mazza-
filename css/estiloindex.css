@@ -107,7 +107,7 @@ div {
     justify-content: space-around;
 }
 
-span{
+span {
     text-align: justify;
     font-size: 18px;
 }
@@ -134,4 +134,30 @@ span{
 #imagenEspecial:hover {
     transform: scale(1.1);
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+#estiloQuienesSomos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+
+    background-color: #b3d2ec;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 5);
+    font-weight: bold;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+
+}
+
+#estiloQuienesSomos span {
+    color: black;
+    text-align: justify;
 }

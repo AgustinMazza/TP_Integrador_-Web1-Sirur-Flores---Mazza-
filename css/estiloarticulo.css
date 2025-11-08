@@ -151,3 +151,18 @@ article img {
     max-width: 100%;
     height: auto;
 }
+
+.estiloCartel {
+    background-Color: '#3B82F6';
+    font-Family: 'Gill Sans';
+    color: 'white';
+    width: "80%";
+    font-Weight: 'bold';
+    display: 'flex';
+    justify-content: 'center';
+    padding: '10px';
+    text-Align: 'center';
+    margin: 'auto';
+    border-Radius: '20px';
+    margin-Top: '15px';
+}
