@@ -9,8 +9,8 @@
 }
 
 
-#MS {
-    width: 450px;
+#MS img {
+    width: auto;
     height: 150px;
 }
 
@@ -19,6 +19,11 @@
     height: auto;
     margin: 0;
     padding: 0;
+}
+
+.links {
+    display: flex;
+    align-items: center;
 }
 
 .links a {
@@ -100,6 +105,11 @@ h3 {
 div {
     display: flex;
     justify-content: space-around;
+}
+
+span{
+    text-align: justify;
+    font-size: 18px;
 }
 
 .carrusel {

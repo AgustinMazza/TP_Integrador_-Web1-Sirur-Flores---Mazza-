@@ -3,23 +3,37 @@
     justify-content: space-between;
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
-    padding: 0 40px;
+
     background-color: #3B82F6;
-    height: 60px;
+    flex-wrap: wrap;
 }
 
-#MS {
-    color: white;
-    font-size: 22px;
-    font-weight: bold;
+
+#MS img {
+    width: auto;
+    height: 150px;
+}
+
+.iconitos {
+    width: 120px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.links {
+    display: flex;
+    align-items: center;
 }
 
 .links a {
     color: white;
     font-size: 22px;
-    margin-left: 30px;
+    margin-right: 15px;
     text-decoration: none;
-    display: inline-block;
+
+    display: flex;
+    align-items: center;
 }
 
 .links a:hover {
@@ -131,7 +145,7 @@ article p {
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-img {
+article img {
     display: flex;
     border-radius: 10px;
     max-width: 100%;
