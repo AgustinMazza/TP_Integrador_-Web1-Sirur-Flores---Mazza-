@@ -32,14 +32,4 @@ primero, volver al último.
 todo el sitio.
 ● El sitio debe estar subido a Github y se debe utilizar github pages para desplegarlo
 en la web.
-
-
-Tareas pendientes:
-
-preguntar flexbox
-AÑADIR TODO A .JS
-yo:
-    agregar un poco de infoirmacion gral al index
-    Agregar foto al background
-
     

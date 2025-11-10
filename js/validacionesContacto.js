@@ -17,7 +17,7 @@ function validarFormulario() {
     const expRegName = /^([A-Za-z][a-z]+)(\s)?([A-Za-z][a-z]+)?$/;
     const expRegApellido = /^([A-Za-z][a-z]+)(\s)?([A-Za-z][a-z]+)?$/;
     const expRegDNI = /^([0-9]{8,9})$/;
-    const expRegEmail = /^(\w)+@(\w)+\.com(\.ar)?$/;
+    const expRegEmail = /^([a-zA-Z0-9.,&#$*%+-_¡!¿?;:°|]+)+@(\w)+\.com(\.ar)?$/;
     const expRegTelefono = /^([0-9]{7,15})$/;
 
     const errorName = document.getElementById('errorNombre');
